@@ -7,7 +7,7 @@ describe "Test de Comensales" {
 	var comensalPopular = new HambrePopular(peso = 85000)
 	var corte1 = new Corte(nombreDelCorte = "Asado",calidad = 10,peso = 250)
 	var corte2 = new Corte(nombreDelCorte = "entraña",calidad = 7,peso = 200)
-	var corte3 = new Corte(nombreDelCorte = "Asado",calidad = 8,peso = 50)
+	var corte3 = new Corte(nombreDelCorte = "chorizo",calidad = 8,peso = 50)
 	var parrillada1= new Parrillada()
 	var comensalDePaladarFino = new DePaladarFino(peso = 1)
 	var hamburguesa2 = new HamburguesaDeCarne(tipoDePan= panDeMasaMadre)

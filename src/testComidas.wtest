@@ -6,7 +6,7 @@ describe "Test de Comidas" {
 	var provoleta = new Provoleta(peso = 190,tieneEspecias = true)
 	var corte1 = new Corte(nombreDelCorte = "Asado",calidad = 10,peso = 250)
 	var corte2 = new Corte(nombreDelCorte = "entraña",calidad = 7,peso = 200)
-	var corte3 = new Corte(nombreDelCorte = "Asado",calidad = 8,peso = 50)
+	var corte3 = new Corte(nombreDelCorte = "chorizo",calidad = 8,peso = 50)
 	var parrillada1 = new Parrillada()
 	method initialize() {
 		parrillada1.agregarACortesPedidos(corte1)
