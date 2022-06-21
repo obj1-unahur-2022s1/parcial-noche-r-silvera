@@ -16,7 +16,23 @@ class Comensal {
 }
 
 class Vegetariano inherits Comensal{
-	override method leAgrada(unaComida){
-		
-	}
+	override method leAgrada(unaComida) = unaComida.esAptaVegetariano() 
+										and unaComida.valoracion() > 85
+										
+	method ningunaComidaEsAbundante() = comidasQueComio.all{c => not c.esAbundante()}
+	
+	override method estaSatisfecho() = super() and self.ningunaComidaEsAbundante()
 }
+
+class HambrePopular inherits Comensal{
+	override method leAgrada(unaComida) = unaComida.esAbundante()
+}
+
+class DePaladarFino inherits Comensal{
+	override method leAgrada(unaComida) = unaComida.peso().between(150,300) and
+										unaComida.valoracion() > 100
+	
+	method cantidadDeComidasQueComioEsPar() = comidasQueComio.size() % 2 == 0	
+	override method estaSatisfecho() = super() and self.cantidadDeComidasQueComioEsPar()
+}
+
