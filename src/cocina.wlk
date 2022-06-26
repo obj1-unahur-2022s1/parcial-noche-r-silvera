@@ -33,11 +33,11 @@ class Cocina{
 	
 	method platoFuerteCarnivoro() = self.platosCarnivoros().max{p => p.valoracion()}
 	
-	method comidasQueLeGustanA(unComensal) = comidasPreparadas.filter{c => unComensal.leAgreda(c)}
+	method comidasQueLeGustanA(unComensal) = comidasPreparadas.filter{c => unComensal.leAgrada(c)}
 	
 	method elegirPlatoPara(unComensal){
 		if(not self.comidasQueLeGustanA(unComensal).isEmpty()){
-			var comida = self.comidasQueLeGustanA(unComensal).anyOne()
+			const comida = self.comidasQueLeGustanA(unComensal).anyOne()
 			self.sacarDeComidasPreparadas(comida)
 			unComensal.comer(comida)
 		}

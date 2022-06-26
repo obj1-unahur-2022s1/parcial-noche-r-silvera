@@ -16,8 +16,9 @@ class Comensal {
 }
 
 class Vegetariano inherits Comensal{
-	override method leAgrada(unaComida) = unaComida.esAptaVegetariano() 
-										and unaComida.valoracion() > 85
+	override method leAgrada(unaComida) = 
+	
+		unaComida.esAptoVegetariano()  and unaComida.valoracion() > 85
 										
 	method ningunaComidaEsAbundante() = comidasQueComio.all{c => not c.esAbundante()}
 	
